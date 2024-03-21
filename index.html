@@ -1,0 +1,229 @@
+<html>
+<head>
+    <meta charset="UTF-8"><!--[if IE]><![endif]-->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Dmitrii Gromov | Backend Developer</title>
+
+    <meta name="description"
+          content="Detail-oriented backend developer passionate about combining beautiful code with beautiful design.">
+
+    <meta itemprop="name" content="Website | Dmitrii Gromov">
+    <meta itemprop="description"
+          content="Detail-oriented backend developer passionate about combining beautiful code with beautiful design.">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="content"></div>
+<script src="https://fb.me/react-0.14.6.js"></script>
+<script src="https://fb.me/react-dom-0.14.6.js"></script>
+<script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+<script type="text/jsx">
+
+    const DATA = {
+        name: "Dmitrii Gromov",
+        subtext: "Senior Backend Developer. Remote or Novi Sad, Serbia",
+        jobStatus: "Looking forward to bring your ideas to life",
+        jobStatus2: "For business enquiries, please email me at vnddrx@gmail.com",
+        instaURL: 'https://www.instagram.com/vnddr/',
+        githubURL: 'https://github.com/vnddr',
+        linkedinURL: 'https://www.linkedin.com/in/dmitrii-gromov/',
+        email: 'mailto:vnddrx@gmail.com'
+    }
+
+    const App = React.createClass({
+        render: function () {
+            return (
+                <div className="app">
+                    <Left
+                        name={this.props.profileData.name}
+                        subtext={this.props.profileData.subtext}
+                        jobStatus={this.props.profileData.jobStatus}
+                        jobStatus2={this.props.profileData.jobStatus2}
+                        twitterURL={this.props.profileData.twitterURL}
+                        instaURL={this.props.profileData.instaURL}
+                        githubURL={this.props.profileData.githubURL}
+                        linkedinURL={this.props.profileData.linkedinURL}
+                    />
+                    <Right
+                        intro={this.props.profileData.intro}
+                        resumeURL={this.props.profileData.resumeURL}
+                    />
+                </div>
+            );
+        }
+    });
+
+    const Left = React.createClass({
+        render: function () {
+            return (
+                <div className="left">
+                    <div className="bg-img"></div>
+                    <div className="left-inner">
+                        <div className="info">
+                            <div>
+                            <div className="centered-photo">
+                                <img className="rounded-photo" src="img/photo.png"/>
+                            </div>
+                            </div>
+                            <h2 className="name">{this.props.name}</h2>
+                            <div className="subtext">{this.props.subtext}</div>
+                            <div className="jobStatus">{this.props.jobStatus}</div>
+                            <br/>
+                            <div className="jobStatus2">{this.props.jobStatus2}</div>
+                            <div className="social-links">
+                                <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                                <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                                <a href={this.props.linkedinURL} target="_blank"><i className="fa fa-linkedin"></i></a>
+                                <a href={this.props.email} target="_blank"><i className="fa fa-email"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+    });
+
+    const Right = React.createClass({
+        render: function () {
+            return (
+                <div className="right">
+                    <div className="right-inner">
+                        <div className="introduction">
+                            <div className="content">
+                                <p className="intro-p">I'm Dmitrii, a backend developer based in Novi Sad, Serbia. As a
+                                    self-employed engineer, I specialize in crafting efficient and scalable software
+                                    solutions tailored to meet your specific needs. With a passion for technology and a
+                                    commitment to excellence, I bring expertise and dedication to every project I
+                                    undertake for almost 10 years at this moment. Let's collaborate to turn your ideas into reality!</p>
+                            </div>
+                        </div>
+                        <div className="services">
+                            <h4>Services</h4>
+                            <div className="content">
+                                <div>I can help you with almost any task related to server-side programming. For
+                                    example:
+                                </div>
+                                <p className="intro-p">🚀 API Development: Craft robust APIs tailored to your unique
+                                    requirements.<br/>
+                                    🔧 Scripting: Automate processes and enhance efficiency with custom scripts.<br/>
+                                    ⚙️ Background Tasks: Ensure smooth operations with optimized task execution.<br/>
+                                    🌐 Web Scraping: Harness data from the web for valuable insights.<br/>
+                                    🤖 Messenger Bots: Elevate user engagement with intelligent and interactive
+                                    bots.<br/>
+                                    🔮 ChatGPT Integration: Infuse AI capabilities into your applications.<br/>
+                                    🤝 Teamwork: Empower your team with me as lead/senior engineer.</p>
+
+                                <p className="intro-p">And many many more! Get in touch and let's discuss the
+                                    opportunities.</p>
+                            </div>
+                        </div>
+                        <div className="skills">
+                            <h4>Skills</h4>
+                            <div className="content">
+                                <div className="skill-category">
+                                    <strong>Languages: &nbsp;</strong>
+                                    <span>Golang, PHP, Python</span>
+                                </div>
+                                <div className="skill-category">
+                                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                                    <span>Laravel, Symfony, Lumen</span>
+                                </div>
+                                <div className="skill-category">
+                                    <strong>Storage: &nbsp;</strong>
+                                    <span>PostgreSQL, MySQL, MongoDB, Redis, Memcached</span>
+                                </div>
+                                <div className="skill-category">
+                                    <strong>Messaging: &nbsp;</strong>
+                                    <span>Kafka, RabbitMQ</span>
+                                </div>
+                                <div className="skill-category">
+                                    <strong>Tools: &nbsp;</strong>
+                                    <span>Docker, Git, Nginx, Apache, Ansible, k8s</span>
+                                </div>
+                                <div className="skill-category">
+                                    <strong>Team-based skills: &nbsp;</strong>
+                                    <span>Team leadership, code review, architecture, requirements' analysis</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="experience">
+                            <h4>Experience</h4>
+                            <div className="content">
+                                <div className="exp-item">
+                                    <div className="job">
+                                        <a className="company" href="https://www.velvetech.com/" target="_blank">Self
+                                            - employed.</a>
+                                        <div className="duration">October 2020 &mdash; Present</div>
+                                    </div>
+                                    <ul className="description">
+                                        <li>Engineer and maintain RESTful cloud services and much more</li>
+                                        <li>Working with clients to develop custom software solutions</li>
+                                        <li>Looking forward to bring your needs to life</li>
+                                    </ul>
+                                </div>
+                                <div className="exp-item">
+                                    <div className="job">
+                                        <a className="company" href="https://letmespeak.org/" target="_blank">Letmespeak.org
+                                            A.G.</a>
+                                        <div className="duration">February 2019 &mdash; August 2023</div>
+                                    </div>
+                                    <div className="title">Senior backend engineer / Team Lead</div>
+                                    <br/>
+                                    Built the app backend core from scratch.
+                                    Prepared it for better scaling when the team and user base grew.
+                                    Built a microservice network with over 20 applications at the moment.
+                                    Successfully fulfilled team lead duties. The most noticeable is constantly finding the compromise solution between team's urge of technical excellence and business needs and time limitations. Also we managed to mix some good application design practices to create the new one which fits our needs greatly.
+                                    Implemented huge variety of features for the application with 700k MAU, for example: analytics, integration of cryptocurrency transactions into payment process, different content features, content editor for translators, social features, real-time trainings (singleplayer and multiplater with websockets), async data processing features with Kafka, AI-based grammar mistake detection, ChatGPT-based dialogues with AI voice acting and task completion detection in real time, etc.
+
+                                </div>
+                                <div className="exp-item">
+                                    <div className="job">
+                                        <a className="company" target="_blank">2GIS</a>
+                                        <div className="duration">February 2016 &mdash; October 2020</div>
+                                    </div>
+                                    <div className="title">Backend engineer</div>
+                                    <br/>
+                                    Developed and supported inner corporate services and tools using PHP. Introduced Golang to my team, successfully adopted Golang as a main language in the team. Then in 2019 switched to a WebAPI team, where I participated in the development of a highload (50Mil+ MAU) distributed API (geo search, company search, geo distribution, etc) built with Scala and lesser tools and services built with Golang.</div>
+                            </div>
+                        </div>
+                        <div className="projects">
+                            <h4>Favorite Clients</h4>
+                            <div className="content">
+                                <div className="project-item">
+                                    <a className="project-title" href="https://2gis.ru"
+                                       target="_blank">2GIS</a>
+                                    <p className="project-desc">Big local search company based mostly in CIS. I used to work there as a backend engineer, and after I went self-employed, we continued to collaborate from time to time. I implemented some in-house tools for the company developers: a great video event calendar and archive with custom features, multiple employee loyalty programs. Completed multiple tasks for a high-load Web API team which provides data to the whole web version, 2gis.ru</p>
+                                </div>
+                                <div className="project-item">
+                                    <a className="project-title" href="https://wildberries.ru" target="_blank">Wildberries</a>
+                                    <p className="project-desc">One of the biggest marketplaces in CIS. I developed multiple services for transit shipment department, for example, developed a service that consolidates a vast amount of different data sources into one unified shipment tracking system.
+                                        </p>
+                                </div>
+                                <div className="project-item">
+                                    <a className="project-title" href="https://letmespeak.org" target="_blank">Letmespeak.org AG</a>
+                                    <p className="project-desc">The first English learning platform with financial motivation! I started to work with Letmespeak back in 2019, with the couple of simple jobs, and through the years, I provided a huge variety of services, designed and created from scratch vast part of the backend ecosystem of this application, even fulfilling the full-time position of backend Team Lead for several years.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <App profileData={DATA}/>,
+        document.getElementById('content')
+    );
+
+</script>
+</body>
+</html>
